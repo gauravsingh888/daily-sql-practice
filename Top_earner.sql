@@ -6,7 +6,6 @@
 --as well as the total number of employees who have maximum total earnings. 
 --Then print these values as  space-separated integers.
 
-
 SELECT TOP 1 total_earnings,COUNT(*)
 FROM (SELECT salary * months AS total_earnings
     FROM Employee

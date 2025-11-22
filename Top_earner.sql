@@ -8,7 +8,6 @@
 
 SELECT TOP 1 total_earnings,COUNT(*)
 FROM (SELECT salary * months AS total_earnings
-    FROM Employee
-) AS t
+      FROM Employee) AS t
 GROUP BY total_earnings
 ORDER BY total_earnings DESC;

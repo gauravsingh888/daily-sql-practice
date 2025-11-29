@@ -7,10 +7,7 @@
 
 
 WITH ranked AS (
-  SELECT
-    Name,
-    Occupation,
-    ROW_NUMBER() OVER (PARTITION BY Occupation ORDER BY Name) AS rn
+  SELECT Name,Occupation,ROW_NUMBER() OVER (PARTITION BY Occupation ORDER BY Name) AS rn
   FROM OCCUPATIONS
 )
 SELECT
